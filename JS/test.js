@@ -4,11 +4,18 @@ function setup() {
   canvas.parent('processing');
   //noLoop();
 }
+function preload() {
+  tor = loadImage("images/choco.jpg");
+}
 
 function draw() {
   noStroke();
-  fill('steelblue');
-  ellipse(0,0,800);
-  fill('deepskyblue');
-  ellipse(450,450,400);
+
+  
+  for (var n = 1;n <=10;n++) {
+    image(tor,25,25,50,50);
+    translate (40,5);
+
+
+  }
 }

@@ -9,18 +9,19 @@ function setup() {
   textSize(40);
   noStroke();
   vierkanten.push(30);
-  // voeg je eigen naam toe
-  // sorteer de array met namen
+  namen.push("Morris");
+  namen.sort();
   // verwijder het eerste element uit vierkanten
   noLoop();
 }
 
 function draw() {
+  
   for (var teller = 0;teller < vierkanten.length;teller++) {
     fill('white');
     text(vierkanten[teller],20,48*(teller + 1));
     text("omtrek = " + 4*vierkanten[teller],130,48*(teller + 1));
-    text("opp = ",400,48*(teller + 1));
+    text("opp = " + vierkanten[teller]*vierkanten[teller],400,48*(teller + 1));
     fill('dodgerblue');
     rect(90,48*(teller) + 25,vierkanten[teller],vierkanten[teller]);
   }
